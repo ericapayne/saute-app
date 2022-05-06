@@ -5,6 +5,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons } from "@expo/vector-icons";
 import { Searchbar, Appbar, DefaultTheme , Provider as PaperProvider, List } from 'react-native-paper';
+import HomeScreen from './Screens/HomeScreen'
+import FavoritesScreen from "./Screens/FavoritesScreen";
+import ProfileScreen from "./Screens/ProfileScreen";
+import SettingsScreen from "./Screens/SettingsScreen";
+
+
 
 
 const theme = {
@@ -16,30 +22,30 @@ const theme = {
   },
 };
 
-const HomeScreen = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const onChangeSearch = value => setSearchQuery(value);
+// const HomeScreen = () => {
+//   const [searchQuery, setSearchQuery] = useState('');
+//   const onChangeSearch = value => setSearchQuery(value);
 
-  return (   
-      <SafeAreaView style={{ flex: 1 }}>
-        <PaperProvider theme={theme}>       
-          <Appbar.Header>
-            {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
-            <Appbar.Content title="Saute" alignItems="center"  />
-          </Appbar.Header>
-          <View style={styles.scrollView}>
-            <Text style= {styles.headerText}>Welcome</Text>
-            <Searchbar placeholder="Search for recipes" onChangeText={onChangeSearch} value={searchQuery} style={{borderRadius: 10, maxWidth: 350, alignSelf: "center"}}/>
-            <Text style={styles.headerText}>Recommended</Text>
+//   return (   
+//       <SafeAreaView style={{ flex: 1 }}>
+//         <PaperProvider theme={theme}>       
+//           <Appbar.Header>
+//             {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
+//             <Appbar.Content title="Saute" alignItems="center"  />
+//           </Appbar.Header>
+//           <View style={styles.scrollView}>
+//             <Text style= {styles.headerText}>Welcome</Text>
+//             <Searchbar placeholder="Search for recipes" onChangeText={onChangeSearch} value={searchQuery} style={{borderRadius: 10, maxWidth: 350, alignSelf: "center"}}/>
+//             <Text style={styles.headerText}>Recommended</Text>
 
-          </View>
+//           </View>
           
-        </PaperProvider>
-      </SafeAreaView>
+//         </PaperProvider>
+//       </SafeAreaView>
       
     
-  )
-}
+//   )
+// };
 
 const SearchScreen = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -60,60 +66,60 @@ const SearchScreen = () => {
   )
 }
 
-function FavoritesScreen() {
-  return (
-    <SafeAreaView style={{ flex: 1}}>
-      <PaperProvider theme={theme}>
-      <Appbar.Header>
-            {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
-            <Appbar.Content title="Saute" alignItems="center"  />
-          </Appbar.Header>
-        <View style={{ flex: 1}}>
-      <Text style={styles.headerText}>Favorites</Text>
-  </View>
-  </PaperProvider>
-    </SafeAreaView>
-  )
-}
+// function FavoritesScreen() {
+//   return (
+//     <SafeAreaView style={{ flex: 1}}>
+//       <PaperProvider theme={theme}>
+//       <Appbar.Header>
+//             {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
+//             <Appbar.Content title="Saute" alignItems="center"  />
+//           </Appbar.Header>
+//         <View style={{ flex: 1}}>
+//       <Text style={styles.headerText}>Favorites</Text>
+//   </View>
+//   </PaperProvider>
+//     </SafeAreaView>
+//   )
+// }
 
-function ProfileScreen() {
-  return (
-    <SafeAreaView style={{ flex: 1}}>
-      <PaperProvider theme={theme}>
-      <Appbar.Header>
-            {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
-            <Appbar.Content title="Saute" alignItems="center"  />
-          </Appbar.Header>
-        <View style={{ flex: 1}}>
-      <Text style={styles.headerText}>Profile</Text>
-  </View>
-  </PaperProvider>
-    </SafeAreaView>
-  )
-}
+// function ProfileScreen() {
+//   return (
+//     <SafeAreaView style={{ flex: 1}}>
+//       <PaperProvider theme={theme}>
+//       <Appbar.Header>
+//             {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
+//             <Appbar.Content title="Saute" alignItems="center"  />
+//           </Appbar.Header>
+//         <View style={{ flex: 1}}>
+//       <Text style={styles.headerText}>Profile</Text>
+//   </View>
+//   </PaperProvider>
+//     </SafeAreaView>
+//   )
+// }
 
-function SettingsScreen() {
-  return (
-    <SafeAreaView style={{ flex: 1}}>
-      <PaperProvider theme={theme}>
-      <Appbar.Header>
-            {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
-            <Appbar.Content title="Saute" alignItems="center"  />
-          </Appbar.Header>
-        <View style={{ flex: 1}}>
-      <List.Section>
-    <List.Subheader style={styles.headerText}>Settings</List.Subheader>
-    <List.Item title="First Item" left={() => <List.Icon icon="folder" />} />
-    <List.Item
-      title="Second Item"
-      left={() => <List.Icon color="#000" icon="folder" />}
-    />
-  </List.Section>
-  </View>
-  </PaperProvider>
-    </SafeAreaView>
-  )
-}
+// function SettingsScreen() {
+//   return (
+//     <SafeAreaView style={{ flex: 1}}>
+//       <PaperProvider theme={theme}>
+//       <Appbar.Header>
+//             {/* <Appbar.Action icon="menu" onPress={() =>{}}/> */}
+//             <Appbar.Content title="Saute" alignItems="center"  />
+//           </Appbar.Header>
+//         <View style={{ flex: 1}}>
+//       <List.Section>
+//     <List.Subheader style={styles.headerText}>Settings</List.Subheader>
+//     <List.Item title="First Item" left={() => <List.Icon icon="folder" />} />
+//     <List.Item
+//       title="Second Item"
+//       left={() => <List.Icon color="#000" icon="folder" />}
+//     />
+//   </List.Section>
+//   </View>
+//   </PaperProvider>
+//     </SafeAreaView>
+//   )
+// }
 
 const Tab = createMaterialBottomTabNavigator();
 
