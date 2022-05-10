@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import icons  from '../constants/icons';
 import images  from '../constants/images';
-
+import { BlurView }  from "@react-native-community/blur";
 
 const RecipeCardDetails = ({ recipeItem }) => {
     return (
@@ -27,8 +27,8 @@ const RecipeCardDetails = ({ recipeItem }) => {
         >
           <Text
             style={{
-              width: "80%",
-              color: "#ffffff",
+              width: "90%",
+              color: "#000000",
               
               fontSize: 16,
             }}
@@ -63,7 +63,7 @@ const RecipeCardDetails = ({ recipeItem }) => {
         <View
           style={{
             ...styles.recipeCardContainer,
-            backgroundColor: 'rgba(211,211,211, 0.5)',
+            backgroundColor: 'rgba(211,211,211, 0.6)',
           }}
         >
           <RecipeCardDetails recipeItem={recipeItem} />
@@ -101,7 +101,7 @@ const RecommendCard = ({ containerStyle, recipeItem, onPress }) => {
           left: 15,
           paddingHorizontal: 12,
           paddingVertical: 5,
-          backgroundColor: 'rgba(77,77,77, 0.8)',
+          backgroundColor: 'rgba(77,77,77, 0.5)',
           borderRadius: 12,
         }}
       >
