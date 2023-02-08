@@ -1,5 +1,9 @@
 # saute-app
+The first iteration of a working prototype of a recipe app that includes a favorites screen, recipe screen, profile screen and settings screen.
 
-Everything is on one page, I was doing it like that and then was going to move them so its not too clunky
-
-I used this https://callstack.github.io/react-native-paper/index.html for components as well
+<div>
+<img src="https://github.com/erizilla/saute-app/blob/newestUpdated/screen-shots/sc1.png" width="25%" height="25%" />
+<img src="https://github.com/erizilla/saute-app/blob/newestUpdated/screen-shots/sc2.png" width="25%" height="25%" />
+<img src="https://github.com/erizilla/saute-app/blob/newestUpdated/screen-shots/sc3.png" width="25%" height="25%" />
+<img src="https://github.com/erizilla/saute-app/blob/newestUpdated/screen-shots/sc4.png" width="25%" height="25%" />
+</div>
